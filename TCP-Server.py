@@ -16,6 +16,5 @@ def handle_client(client_socket):
 
 while True:
     client,addr = server.accept()
-    print("[*] Accepted Connnection from ",(addr[0],addr[1]))
-    client_handler = threading.Thread(target=handle_client,args=(client,))
+    print("[*] Accepted Connnection from ",(addr[0],addr[1]))ler = threading.Thread(target=handle_client,args=(client,))
     client_handler.start()
